@@ -6,11 +6,11 @@ export enum Status {
   Pending = 'pending',
   Suspended = 'suspended',
 }
-type StatusLabelProp = {
+export interface StatusLabelProp {
   children: React.ReactNode;
   status: Status;
   disablid?: boolean;
-};
+}
 
 export default function StatusLabel({
   children,
