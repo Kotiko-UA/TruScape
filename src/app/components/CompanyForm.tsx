@@ -1,14 +1,17 @@
+'use client';
+
 import { Formik, Form } from 'formik';
 import React from 'react';
-import LogoUploader from './Logo-uploader';
-import InputField from './Input-field';
+import LogoUploader from './LogoUploader';
+import InputField from './InputField';
+import Button from './Button';
 
 type CompanyFieldValues = {
   name: string;
   status: string;
   country: string;
   category: string;
-  data: string;
+  joinedDate: string;
   description: string;
 };
 
@@ -17,7 +20,7 @@ const initialValues: CompanyFieldValues = {
   status: '',
   country: '',
   category: '',
-  data: '',
+  joinedDate: '',
   description: '',
 };
 export interface CompanyFormProps {
@@ -42,7 +45,7 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
               placeholder="Category"
               name="category"
             />
-            <InputField label="Join date" type="date" name="date" />
+            <InputField label="Joined date" type="date" name="joinedDate" />
             <InputField
               label="Description"
               placeholder="Description"
@@ -50,6 +53,7 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
             />
           </div>
         </div>
+        <Button type="submit">Add company</Button>
       </Form>
     </Formik>
   );

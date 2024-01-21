@@ -16,7 +16,7 @@ export default function LogoUploader({
 }: LogoUploaderProps) {
   return (
     <div className="flex gap-10 mb-3">
-      {label && <p className="text-base color-grey-900">{label}</p>}
+      {label && <p className="text-base color-gray-900">{label}</p>}
       <label
         htmlFor={id}
         className="flex flex-col items-center justify-center h-40 bg-white border border-slate-900 border-dashed cursor-pointer w-40 rounded-full"
